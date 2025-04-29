@@ -1,0 +1,9 @@
+FROM httpd:2.4.63-alpine
+
+COPY public/ /usr/local/apache2/htdocs/
+
+COPY conf/apache/conf.d/ conf/conf.d
+
+RUN echo "Include conf/conf.d/*.conf" >> "conf/httpd.conf"
+
+EXPOSE 80

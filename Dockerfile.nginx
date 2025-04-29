@@ -1,0 +1,11 @@
+FROM nginx:1.27.5-alpine
+
+WORKDIR /WORKDIR/
+
+COPY Demo_1/ /WORKDIR/Demo_1/
+COPY Demo_2/ /WORKDIR/Demo_2/
+
+COPY conf/nginx/conf.d/ /etc/nginx/conf.d/
+
+EXPOSE 80
+EXPOSE 90

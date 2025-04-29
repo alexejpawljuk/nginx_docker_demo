@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web_server_nginx:
+    build: 
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports: 
+      - "8080:80"
+      - "8090:90"
+    container_name: nclient
+    image: inclient
+    restart: on-failure:3
+  # web_server_apache:
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile.apache
+  #   ports: 
+  #     - "8081:80"
+  #   container_name: aclient
+  #   image: iaclient
+  #   restart: on-failure:3

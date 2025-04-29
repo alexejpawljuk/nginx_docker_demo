@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.nginx
     ports: 
-      - "8080:80"
+      - "80:80"
       - "8090:90"
     container_name: nclient
     image: inclient
